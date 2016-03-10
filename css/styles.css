@@ -1,0 +1,312 @@
+* {
+	box-sizing: border-box;
+}
+
+body,
+button {
+	font-family: 'Lora', serif;
+}
+
+h1,
+h2 {
+	margin: 0;
+}
+
+fieldset {
+	margin: 30px 0 20px;
+}
+
+h1,
+h2 ,
+fieldset{
+	padding: 0;
+}
+
+fieldset,
+button {
+	border: none;
+}
+
+h2,
+legend,
+button {
+	font-size: 1.2em;
+}
+
+legend,
+button {
+	font-weight: bold;
+}
+
+legend {
+	margin: 10px 0;
+}
+
+label,
+p {
+	color: #383838;
+}
+
+p {
+	margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+	background-color: #e8eeef;
+	border: 2px solid #d3d3d3;
+}
+
+
+
+/*MAIN/SUB-HEADER**************************/
+
+.name {
+	padding: 15px 0;
+	text-transform: uppercase;
+	font-size: 1.5em;
+}
+
+.wrap {
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.sub-header {
+	margin: 20px 0 3px;
+	padding: 30px 0;
+	border-bottom: 5px solid #606060;
+}
+
+/*FORM-FIELDS/LABELS**************************/
+
+.sign-up-form {
+	border-top: 2px solid #606060;
+}
+
+.fieldset-border {
+	border-bottom: 2px solid #606060;
+	padding-bottom: 35px;
+}
+
+.button {
+	margin: 2.5px 0;
+}
+
+.button,
+.form-field {
+	padding: 10px;
+}
+
+.textarea {
+	padding: 20px;
+}
+
+.textarea,
+.button,
+.form-field {
+	width: 100%;
+	outline: none;
+	border-radius: .3em;
+}	
+	.form-field-zip {
+		width: 50%;
+	}
+	
+.news-label,
+.label {
+	display: block;
+	margin: 20px 0 15px;
+}
+
+.selection {
+	margin-bottom: 15px;
+}
+
+/*BUTTONS*******************************/
+.reset-button {
+	background-color: #D60000;
+}
+
+/*FOOTER*******************************/
+.footer {
+	font-style: italic;
+	font-size: .875em;
+	margin-top: 15px;
+	padding-bottom: 80px;
+}
+
+/*SHARED-STYLES************************/
+.main-header,
+.submit-button,
+.reset-button { 
+	color: #fffafa;
+	box-shadow: 0 2px 4px rgba(0,0,0,.4);
+}
+
+.main-header,
+.submit-button {
+	background-color: #15d2e5;
+}
+
+.main-header,
+.sub-header,
+.footer {
+	text-align: center;
+}
+
+
+/*****************************************
+ATTEMPT AT STYLING SELECT BOX
+******************************************/
+.select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+	background-image: url(../img/arrow.png);
+	background-repeat: no-repeat;
+	background-position: 96% center;
+}
+
+.select::-ms-expand { /* for IE 11 */
+  display: none;
+}
+
+
+/*STATE-RULES******************************/
+input:focus,
+select:focus,
+textarea:focus {
+	border: 2px solid #12b8c9;
+}
+
+button:hover {
+	opacity: .75;
+}
+
+input[type=radio] + label:hover, 
+input[type=checkbox] + label:hover,
+button:hover,
+select:hover {
+	cursor: pointer;
+}
+
+
+/*PLACEHOLDER-STYLES**************************/
+.required::-moz-placeholder {
+	text-align: right;
+	font-size: .8em;
+	font-style: italic;
+}
+.required:-ms-input-placeholder {
+	text-align: right;
+	font-size: .8em;
+	font-style: italic;
+}
+.required::-webkit-input-placeholder {
+	text-align: right;
+	font-size: .8em;
+	font-style: italic;
+}
+
+
+/********************************************
+STYLES FOR RADIO AND CHECKBOX BEFORE CHECKED
+*********************************************/
+input[type=radio], 
+input[type=checkbox] {
+    display:none;
+}
+
+input[type=radio] + label:before,
+input[type=checkbox] + label:before {
+	content: "";  
+  display: inline-block;
+	width: 13px;  
+  height: 13px; 
+	vertical-align:middle;
+  margin-right: 10px; 
+	background-color: #e8eeef;
+	border: 2px solid #d3d3d3;
+}
+
+input[type=radio] + label:before { 
+		padding: 1px;
+    border-radius: 10px;  
+}
+
+input[type=checkbox] + label:before {
+		font-size: .75em;
+		border-radius: 4px;
+}
+
+
+/***************************************
+STYLES FOR AFTER CHECKED
+****************************************/
+input[type=radio]:checked + label:before,
+input[type=checkbox]:checked + label:before {
+	color: #12b8c9;
+	text-align:center;
+	font-weight: bold;
+	border: 2px solid #12b8c9;
+}
+
+input[type=radio]:checked  + label:before {
+    content: "\2022"; /* Bullet */
+    line-height: 13px;
+		font-size:1.3em;;
+}
+
+input[type=checkbox]:checked + label:before {
+    content:"\2714"; /* check */
+    line-height:14px;
+}
+
+
+/*************************
+MEDIA QUERIES
+**************************/
+@media (min-width: 480px) {
+	.wrap {
+		width: 70%;
+	}
+}
+
+@media (min-width: 760px) {
+	.wrap {
+		width: 60%;
+		padding: 0;
+	}
+
+	.label {
+		display: inline-block;
+		width: 30%;
+	}
+	
+	.form-field {
+		width: 69%;
+	}	
+		.form-field-zip {
+			width: 25%;
+		}
+		
+}
+
+@media (min-width: 1020px) {
+	.wrap {
+		width: 50%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
